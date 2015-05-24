@@ -1,0 +1,52 @@
+<div class="playerInfo">
+  <div class="row">
+    <div class="col-sm-2">
+      <helmet color="{{ car.color }}"></helmet>
+    </div>
+    <div class="col-sm-10">
+      <strong>Current Speed (X, Y):</strong> ({{ car.vector.x }}, {{ car.vector.y }})
+
+      <style>
+        button {
+          width: 100px;
+        }
+      </style>
+
+      <table ng-show="turn">
+        <tr>
+          <td>
+            <button ng-click="adjustVector({ car: car, adjustment: { x: -1, y: -1 } })">({{ car.vector.x - 1 }}, {{ car.vector.y - 1 }})</button>
+          </td>
+          <td>
+            <button ng-click="adjustVector({ car: car, adjustment: { x: 0, y: -1 } })">({{ car.vector.x }}, {{ car.vector.y - 1 }})</button>
+          </td>
+          <td>
+            <button ng-click="adjustVector({ car: car, adjustment: { x: 1, y: -1 } })">({{ car.vector.x + 1 }}, {{ car.vector.y - 1 }})</button>
+          </td>
+        </tr>
+        <tr>
+          <td>
+            <button ng-click="adjustVector({ car: car, adjustment: { x: -1, y: 0 } })">({{ car.vector.x - 1 }}, {{ car.vector.y }})</button>
+          </td>
+          <td>
+            <button ng-click="adjustVector({ car: car, adjustment: { x: 0, y: 0 } })">({{ car.vector.x }}, {{ car.vector.y }})</button>
+          </td>
+          <td>
+            <button ng-click="adjustVector({ car: car, adjustment: { x: 1, y: 0 } })">({{ car.vector.x + 1 }}, {{ car.vector.y }})</button>
+          </td>
+        </tr>
+        <tr>
+          <td>
+            <button ng-click="adjustVector({ car: car, adjustment: { x: -1, y: 1 } })">({{ car.vector.x - 1 }}, {{ car.vector.y + 1 }})</button>
+          </td>
+          <td>
+            <button ng-click="adjustVector({ car: car, adjustment: { x: 0, y: 1 } })">({{ car.vector.x }}, {{ car.vector.y + 1 }})</button>
+          </td>
+          <td>
+            <button ng-click="adjustVector({ car: car, adjustment: { x: 1, y: 1 } })">({{ car.vector.x + 1 }}, {{ car.vector.y + 1 }})</button>
+          </td>
+        </tr>
+      </table>
+    </div>
+  </div>
+</div>

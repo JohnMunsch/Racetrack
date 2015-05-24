@@ -1,0 +1,15 @@
+<div class="container">
+  <div class="row">
+    <div class="col-lg-6">
+      <player-ui car="racetrack.cars[0]" turn="!(racetrack.turn % 2)" adjust-vector="takeTurn(car, adjustment)"></player-ui>
+    </div>
+    <div class="col-lg-6">
+      <player-ui car="racetrack.cars[1]" turn="racetrack.turn % 2" adjust-vector="takeTurn(car, adjustment)"></player-ui>
+    </div>
+  </div>
+  <div class="row">
+    <div class="col-lg-12">
+      <canvas racetrack mouse-follow track-data="racetrack" width="1000" height="500"></canvas>
+    </div>
+  </div>
+</div><!-- /.container -->
