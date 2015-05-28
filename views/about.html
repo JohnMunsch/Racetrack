@@ -1,0 +1,82 @@
+<div class="container">
+  <div class="row">
+    <div class="col-lg-12" style="background-color: white;">
+      <h1>Racetrack</h1>
+
+      <p>Racetrack is a game based on vector math. I first read about it in a Martin Gardner column in Scientific
+        American magazine a very long time ago. It's simple and easy to play and learn.</p>
+
+      <p>This implementation is not very sophisticated, but it was enough to give me several spots I could create
+        themed AngularJS directives for the Packt Publishing course <em>Learning AngularJS Directives.</em></p>
+
+      <h2>Links</h2>
+
+      <ul>
+        <li><a href="https://en.wikipedia.org/wiki/Racetrack_(game)">https://en.wikipedia.org/wiki/Racetrack_(game)</a></li>
+        <li><a href="http://www.sjbaker.org/paper_and_pencil_games/graph_racers/">http://www.sjbaker.org/paper_and_pencil_games/graph_racers/</a></li>
+      </ul>
+
+      <h2>Credits</h2>
+
+      <ul>
+        <li><a href="https://thenounproject.com/term/race-car/59840/">Race-Car icon by Juan Garces for The Noun Project</a></li>
+        <li><a href="https://thenounproject.com/term/pilot/99994/">Pilot icon by Anuar Zhumaev for The Noun Project</a></li>
+      </ul>
+
+      <h2>Tools Used in the Course</h2>
+
+      <ul>
+        <li><a href="https://nodejs.org/">Node.js</a> - This is really only used to install and run the next tool. No Node.js code is written or run during the course.</li>
+        <li><a href="https://github.com/leeluolee/puer">Puer</a> - This serves up my HTML/CSS/JavaScript for the demonstration and automatically refreshes the browser each time I save a file.</li>
+      </ul>
+
+      <h2>Exercises</h2>
+
+      <p>The source code for the course is freely available and after you've gone through the videos you might find
+        yourself wanting to either explore improving the game itself or the directives in some way. In the spirit of
+        that idea, I thought I'd suggest some areas for improvement.</p>
+
+      <h3>Game Improvements</h3>
+
+      <ul>
+        <li>Movement Timer - The game is obviously one which can be planned out many moves in advance if you're willing
+          to make the other player wait for extended periods. In board gaming this is called "analysis paralysis". Put
+          a time limit on how long a user has to pick his or her move and if they fail to do so within the specified
+          period they automatically maintain the same vector for another turn.</li>
+        <li>Take Damage - If a player sends his or her car off the track (inside or outside) or runs into another car,
+          assign damage to the car. If it goes over a set limit that player loses.</li>
+        <li>Purchase Special Moves - Give each player some initial money which can be used to buy damage points and
+          other abilities which can be used during the game (for example, braking, extreme braking, etc.). See below
+          for examples of abilities which could be added and "purchased" for use.</li>
+        <li>Braking - The eight possible next vector choices have the current vector as the top-center choice rather
+          than the center choice. Thus allowing the user to slow down by up to two rather than just one.</li>
+        <li>Extreme Braking - The same as breaking except that the current vector is actually outside of all of the
+          new choices. Thus allowing a user to slow down by three if necessary.</li>
+        <li>Pedal to the Metal - Eight points of movement have the vector point below the bottom center.</li>
+        <li>Accelerate - The same idea as breaking except the current vector is at the bottom center, allowing an
+          acceleration of two instead of just one.</li>
+        <li>Damage Points - Take off points of damage for each car collision with another car or with an out-of-bounds
+          area on the racetrack. Once a user is out of points, they lose the game unless the other player does the
+          same on the same turn.</li>
+      </ul>
+
+      <h3>Program Improvements</h3>
+
+      <ul>
+        <li>Reset - Reset the game after a player wins. Note that this implies the game can tell when a player wins,
+          that means you have to track that a player went all the way around a track before crossing the finish
+          line.</li>
+        <li>Internet Games - Utilize a service like Firebase (or another back-end-as-a-service) to store the data for a
+          given game on a remote server and allow players to play over the Internet.</li>
+        <li>Better Movement UI - Instead of clicking buttons to select a new movement vector, Show the available moves
+          on the racetrack and let the user pick a choice there.</li>
+        <li>Track Editing - It would be fun to have different tracks to play on. Provide a simple means (perhaps by
+          clicking dots or drag selecting groups of dots) to mark out a new track. Export the data so it can be
+          embedded into the game or even store designs online.</li>
+        <li>Controls for Special Moves - If you implement any of the new special moves in the game, be sure to
+          implement new directives for each one. It could allow the user to invoke the special move and show how many
+          uses of the special move are left for the current game.</li>
+      </ul>
+    </div>
+  </div>
+</div><!-- /.container -->
